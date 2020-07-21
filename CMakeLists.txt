@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
-include(${CMAKE_SOURCE_DIR}/_cmake_modules/copy_resources.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake_modules/copy_resources.cmake)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake_modules)
 
 if(WIN32)

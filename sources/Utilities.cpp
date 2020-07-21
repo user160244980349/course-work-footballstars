@@ -38,7 +38,7 @@ void MainFunction (SDL_Renderer* renderer) {
     temp.h = 30;
     temp.x = 0;
     temp.y = 0;
-    ModelView* ballView = new ModelView (renderer, ball, temp, true, "Resources/ball.png", SDL_FLIP_NONE); // Вид мяча.
+    ModelView* ballView = new ModelView (renderer, ball, temp, true, "resources/ball.png", SDL_FLIP_NONE); // Вид мяча.
 
     temp.w = WINDOWWIDTH + 100;
     temp.h = 50;
@@ -54,7 +54,7 @@ void MainFunction (SDL_Renderer* renderer) {
     temp.h = 50;
     temp.x = 0;
     temp.y = 0;
-    ModelView* groundView = new ModelView (renderer, ground, temp, false, "Resources/grass.png", SDL_FLIP_NONE); // Вид земли.
+    ModelView* groundView = new ModelView (renderer, ground, temp, false, "resources/grass.png", SDL_FLIP_NONE); // Вид земли.
 
     temp.w = 50;
     temp.h = WINDOWHIGHT + 100;
@@ -98,7 +98,7 @@ void MainFunction (SDL_Renderer* renderer) {
     temp.h = WINDOWHIGHT;
     temp.x = 0;
     temp.y = 0;
-    ModelView* backgroundView = new ModelView (renderer, background, temp, false, "Resources/sky.png", SDL_FLIP_NONE); // Вид заднего фона.
+    ModelView* backgroundView = new ModelView (renderer, background, temp, false, "resources/sky.png", SDL_FLIP_NONE); // Вид заднего фона.
 
     temp.w = 100;
     temp.h = 200;
@@ -109,7 +109,7 @@ void MainFunction (SDL_Renderer* renderer) {
     temp.h = 200;
     temp.x = 0;
     temp.y = 0;
-    ModelView* rightGoalsView = new ModelView (renderer, rightGoals, temp, false, "Resources/footballgoals.png", SDL_FLIP_NONE); // Вид правых ворот.
+    ModelView* rightGoalsView = new ModelView (renderer, rightGoals, temp, false, "resources/footballgoals.png", SDL_FLIP_NONE); // Вид правых ворот.
     temp.w = 150;
     temp.h = 10;
     temp.x = WINDOWWIDTH - 150;
@@ -140,7 +140,7 @@ void MainFunction (SDL_Renderer* renderer) {
     temp.h = 200;
     temp.x = 0;
     temp.y = 0;
-    ModelView* leftGoalsView = new ModelView (renderer, leftGoals, temp, false, "Resources/footballgoals.png", SDL_FLIP_HORIZONTAL); // Вид левых ворот.
+    ModelView* leftGoalsView = new ModelView (renderer, leftGoals, temp, false, "resources/footballgoals.png", SDL_FLIP_HORIZONTAL); // Вид левых ворот.
     temp.w = 10;
     temp.h = 188;
     temp.x = 60;
@@ -178,11 +178,11 @@ void MainFunction (SDL_Renderer* renderer) {
     temp.y = 0;
 
     // Массив видов левого игрока.
-    ModelView* player1View[] = {    new ModelView (renderer, player1, temp, false, "Resources/aguero.png", SDL_FLIP_NONE),
-                                    new ModelView (renderer, player1, temp, false, "Resources/bale.png", SDL_FLIP_HORIZONTAL),
-                                    new ModelView (renderer, player1, temp, false, "Resources/delpiero.png", SDL_FLIP_NONE),
-                                    new ModelView (renderer, player1, temp, false, "Resources/james.png", SDL_FLIP_NONE),
-                                    new ModelView (renderer, player1, temp, false, "Resources/sterling.png", SDL_FLIP_NONE) };
+    ModelView* player1View[] = {    new ModelView (renderer, player1, temp, false, "resources/aguero.png", SDL_FLIP_NONE),
+                                    new ModelView (renderer, player1, temp, false, "resources/bale.png", SDL_FLIP_HORIZONTAL),
+                                    new ModelView (renderer, player1, temp, false, "resources/delpiero.png", SDL_FLIP_NONE),
+                                    new ModelView (renderer, player1, temp, false, "resources/james.png", SDL_FLIP_NONE),
+                                    new ModelView (renderer, player1, temp, false, "resources/sterling.png", SDL_FLIP_NONE) };
 
     temp.w = 50;
     temp.h = 100;
@@ -200,11 +200,11 @@ void MainFunction (SDL_Renderer* renderer) {
     temp.y = 0;
 
     // Массив видов правого игрока.
-    ModelView* player2View[] = {    new ModelView (renderer, player2, temp, false, "Resources/aguero.png", SDL_FLIP_HORIZONTAL),
-                                    new ModelView (renderer, player2, temp, false, "Resources/bale.png", SDL_FLIP_NONE),
-                                    new ModelView (renderer, player2, temp, false, "Resources/delpiero.png", SDL_FLIP_HORIZONTAL),
-                                    new ModelView (renderer, player2, temp, false, "Resources/james.png", SDL_FLIP_HORIZONTAL),
-                                    new ModelView (renderer, player2, temp, false, "Resources/sterling.png", SDL_FLIP_HORIZONTAL) };
+    ModelView* player2View[] = {    new ModelView (renderer, player2, temp, false, "resources/aguero.png", SDL_FLIP_HORIZONTAL),
+                                    new ModelView (renderer, player2, temp, false, "resources/bale.png", SDL_FLIP_NONE),
+                                    new ModelView (renderer, player2, temp, false, "resources/delpiero.png", SDL_FLIP_HORIZONTAL),
+                                    new ModelView (renderer, player2, temp, false, "resources/james.png", SDL_FLIP_HORIZONTAL),
+                                    new ModelView (renderer, player2, temp, false, "resources/sterling.png", SDL_FLIP_HORIZONTAL) };
 
     temp.w = 60;
     temp.h = 190;
@@ -246,7 +246,7 @@ void MainFunction (SDL_Renderer* renderer) {
 
     Physics* physics[] = {player1Controller, player2Controller, ballPhysics}; // Массив контроллеров.
 
-    Scoreboard* scores = new Scoreboard(renderer, "Resources/fonts/Ubuntu-B.ttf");  // Табло счета.
+    Scoreboard* scores = new Scoreboard(renderer, "resources/fonts/Ubuntu-B.ttf");  // Табло счета.
 
     int modelCounter1 = 0;  // Номер вида игрока слера.
     int modelCounter2 = 1;  // Номер вида игрока справа.
