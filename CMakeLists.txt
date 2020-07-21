@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-set(CMAKE_C_STANDERD 11)
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
 include(${CMAKE_SOURCE_DIR}/_cmake_modules/copy_resources.cmake)
@@ -13,14 +13,13 @@ endif(WIN32)
 
 project(footballstars)
 
-file(GLOB_RECURSE INC ${CMAKE_CURRENT_SOURCE_DIR}/include *.h)
+file(GLOB_RECURSE INC ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/sources/*.cpp)
 
 add_executable(${PROJECT_NAME}
         ${INC}
         ${SRC})
 
-copy_resources(${CMAKE_SOURCE_DIR}/_resources)
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 find_package(SDL2_image REQUIRED)
@@ -34,3 +33,5 @@ target_link_libraries(${PROJECT_NAME}
         ${SDL2_LIBRARY}
         ${SDL2_TTF_LIBRARIES}
         ${SDL2_IMAGE_LIBRARIES})
+
+copy_resources(${CMAKE_CURRENT_SOURCE_DIR}/_resources)
